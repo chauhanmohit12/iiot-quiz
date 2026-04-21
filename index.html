@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IoT Quiz</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── Header ──────────────────────────────────────────── -->
+  <header>
+    <p class="header-tag">Internet of Things</p>
+    <h1>IoT MCQ Quiz</h1>
+    <p class="header-sub">Select a question set below and test your knowledge</p>
+  </header>
+
+  <main>
+
+    <!-- ── Set Selector ────────────────────────────────────── -->
+    <div class="selector-card">
+      <label class="selector-label" for="setSelector">Choose Question Set</label>
+      <div class="select-wrap">
+        <select id="setSelector">
+          <option value="">— Select a set to begin —</option>
+          <!-- Options injected by quiz.js -->
+        </select>
+      </div>
+    </div>
+
+    <!-- ── Quiz Container ──────────────────────────────────── -->
+    <div id="quizContainer" class="hidden">
+
+      <!-- Set meta -->
+      <div class="quiz-header">
+        <span class="quiz-set-title" id="setTitle"></span>
+        <span class="quiz-set-info" id="setInfo"></span>
+      </div>
+
+      <!-- Questions rendered here -->
+      <div id="questionsWrap"></div>
+
+      <!-- Submit -->
+      <div class="submit-wrap">
+        <button class="btn-submit" id="submitBtn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          Submit Answers
+        </button>
+      </div>
+
+      <!-- Results panel (hidden until submit) -->
+      <div id="resultsPanel" class="hidden">
+        <h2 class="results-title">Your Results</h2>
+
+        <div class="score-display" id="scoreLine"></div>
+
+        <div class="bar-track">
+          <div class="bar-fill" id="scoreBar" style="width:0%"></div>
+        </div>
+
+        <!-- Incorrect answer review -->
+        <div id="reviewWrap"></div>
+
+        <div class="retry-wrap">
+          <button class="btn-retry" id="retryBtn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-4"/></svg>
+            Retry This Set
+          </button>
+        </div>
+      </div>
+
+    </div><!-- /#quizContainer -->
+
+  </main>
+
+  <!-- Data files first, then logic -->
+  <script src="data1.js"></script>
+  <script src="data2.js"></script>
+  <script src="data3.js"></script>
+  <script src="data4.js"></script>
+  <!-- <script src="data4.js"></script> -->
+  <script src="quiz.js"></script>
+
+</body>
+</html>
