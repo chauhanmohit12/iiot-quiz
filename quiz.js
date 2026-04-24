@@ -1,6 +1,6 @@
 // quiz.js — main quiz logic
 
-const sets = [set1, set2, set3, set4, set5, set6, set7, set8, set9, set10, set11, set12];
+const sets = [set1, set2, set3, set4, set5, set6, set7, set8, set9, set10, set11, set12, testset1, testset2, testset3];
 let currentSet = null;
 let userAnswers = [];
 
